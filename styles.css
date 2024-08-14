@@ -20,6 +20,36 @@
     font-style: normal;
 }
 
+@media (max-width: 600px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: calc(min(var(--font-size), 80px));
+    }
+
+    .space, .format2, .mainformat {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .photo img {
+        width: 40px;
+    }
+
+    .boxtext {
+        width: 100%;
+        font-size: 14px; /* Ajusta según el diseño */
+    }
+}
+
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 html{
     scroll-behavior: smooth;
