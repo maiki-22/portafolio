@@ -1,0 +1,93 @@
+---
+import Etiqueta from './Etiqueta.astro';
+import Bootstrap from './icons/Bootstrap.astro';
+import NodeJS from './icons/NodeJS.astro';
+import React from './icons/React.astro';
+import Vite from './icons/Vite.astro';
+import Social from './Social.astro';
+import GithubIcon from './icons/Github.astro';
+import LinkIcon from './icons/Link.astro';
+const TAGS = {
+    NODEJS: {
+        name: 'NodeJS',
+        color: 'bg-green-900',
+        class: 'size-4 md:size-6',
+        icon: NodeJS,
+ },
+ REACT: {
+        name: 'React',
+        color: 'bg-blue-400',
+        class: 'size-4 md:size-6',
+        icon: React,
+},
+
+    VITE: {
+        name: 'Vite',
+        color: 'bg-violet-700',
+        class: 'size-4 md:size-6',
+        icon: Vite,
+    },
+    BOOTSTRAP: {
+        name: 'Bootstrap',
+        color: 'bg-fuchsia-700',
+        class: 'size-4 md:size-6',
+        icon: Bootstrap
+    }
+
+
+}
+const PROJECTS = [
+    {
+        title:'• MaikiMusic - Libreria musical',
+        description: 'Aplicación CRUD en React para gestionar canciones y artistas, utilizando axios para peticiones HTTP, y React Bootstrap para el diseño. Emplea mockAPI para simular datos y soporta operaciones de creación, lectura, actualización y eliminación.',
+        link: 'https://maiki-22.github.io/Dess-appweb-nota1/',
+        github: 'https://github.com/maiki-22/Dess-appweb-nota1',
+        image: '/projects/maikimusic.webp',
+        tags: [TAGS.NODEJS,TAGS.REACT,TAGS.VITE,TAGS.BOOTSTRAP]
+    },
+]
+---
+
+{
+    PROJECTS.map(({image,title,description,tags,github,link})=>(
+        <article>
+            <h3
+            class="text-2xl font-semibold text-emerald-300 mb-2 mt-8"
+            >
+            {title}
+            </h3>
+            <p 
+            class="text-lg text-pretty mb-3"
+            >{description}</p>
+            <ul class="flex gap-x-2 flex-row py-2 mb-2">
+                {
+                    tags.map(tag =>(
+                        <Etiqueta class={tag.color}>
+                            <tag.icon class={tag.class}/>
+                            {tag.name}
+                        </Etiqueta>
+                    ))
+                }
+            </ul>
+            <section class="group relative">
+                    <div class="absolute inset-0 bg-black/30 flex flex-col gap-y-4 items-center justify-center opacity-0 transition-all duration-300 group-hover:opacity-100">
+                        <Social class="bg-black" href={github}>
+                            <GithubIcon class="size-4 md:size-6"/>
+                            Repositorio
+                        </Social>
+                        <Social class="bg-black" href={link}>
+                            <LinkIcon class="size-4 md:size-6"/>
+                            Enlace
+                        </Social>
+                    </div>
+                        <img 
+                        class="rounded-none shadow-2xl"
+                        src={image} alt={`Captura de pantalla del proyecto ${image}`}
+                    >
+            </section>
+
+
+
+        </article>
+    ))
+}

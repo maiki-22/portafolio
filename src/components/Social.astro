@@ -1,0 +1,15 @@
+
+<a
+  href={Astro.props.href}
+  class={`${Astro.props.class} rounded-none 
+  flex justify-center items-center gap-x-2 
+  py-1 px-2 md:py-2 md:px-4 
+  text-xs md:text-base
+  hover:scale-110 
+  transition
+  `}
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <slot />
+</a>
