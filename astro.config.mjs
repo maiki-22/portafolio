@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://maiki-22.github.io/',
-  base: '/portafolio',
+  site: 'https://maiki-dev.me/',
+  base: '/portafolio/',
   integrations: [tailwind(),react()]
 });
