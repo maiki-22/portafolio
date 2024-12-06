@@ -44,7 +44,7 @@ const TAGS = {
     },
     LARAVEL: {
         name: 'Laravel',
-        color: 'bg-red-500',
+        color: 'bg-zinc-800',
         class: 'size-4 md:size-6',
         icon: LaravelIcon
     },
@@ -62,15 +62,13 @@ const PROJECTS = [
     },
     {
         title:'• MaikiMusic V2 - Libreria musical',
-        description: 'Aplicacion CRUD, version mejorar de la anterior, con mejor diseño y funcionalidades, utilizando React, Vite, TailwindCSS y Axios para peticiones HTTP. Soporta operaciones de creación, lectura, actualización y eliminación. Backend en PHP laravel realizado por mi.',
+        description: 'MaikiMusic V2 es una versión mejorada de la librería musical original, con un diseño más atractivo y funcionalidades avanzadas. Utiliza React y Vite para una experiencia de usuario fluida, TailwindCSS para un diseño moderno y Axios para manejar peticiones HTTP. El backend está desarrollado en PHP Laravel, proporcionando una robusta gestión de datos. Soporta todas las operaciones CRUD: creación, lectura, actualización y eliminación.',
         link: 'https://maiki-dev.me/music_app/',
         github: 'https://github.com/maiki-22/music_app',
         image: '/portafolio/projects/musicappv2.webp',
-        tags: [TAGS.NODEJS,TAGS.REACT,TAGS.VITE,TAGS.TAILWIND,TAGS.LARAVEL]
-
+        tags: [TAGS.NODEJS, TAGS.REACT, TAGS.VITE, TAGS.TAILWIND, TAGS.LARAVEL]
     }
 ]
----
 
 {
     PROJECTS.map(({image,title,description,tags,github,link})=>(
@@ -107,7 +105,7 @@ const PROJECTS = [
                         <img 
                         class="rounded-none shadow-2xl"
                         src={image} alt={`Captura de pantalla del proyecto ${image}`}
-                    >
+                        />
             </section>
 
 
