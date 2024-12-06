@@ -44,7 +44,7 @@ const TAGS = {
     },
     LARAVEL: {
         name: 'Laravel',
-        color: 'bg-zinc-800',
+        color: 'bg-zinc-900',
         class: 'size-4 md:size-6',
         icon: LaravelIcon
     },
@@ -66,9 +66,11 @@ const PROJECTS = [
         link: 'https://maiki-dev.me/music_app/',
         github: 'https://github.com/maiki-22/music_app',
         image: '/portafolio/projects/musicappv2.webp',
-        tags: [TAGS.NODEJS, TAGS.REACT, TAGS.VITE, TAGS.TAILWIND, TAGS.LARAVEL]
+        tags: [TAGS.NODEJS,TAGS.REACT,TAGS.VITE,TAGS.TAILWIND,TAGS.LARAVEL]
+
     }
 ]
+---
 
 {
     PROJECTS.map(({image,title,description,tags,github,link})=>(
@@ -105,7 +107,7 @@ const PROJECTS = [
                         <img 
                         class="rounded-none shadow-2xl"
                         src={image} alt={`Captura de pantalla del proyecto ${image}`}
-                        />
+                    >
             </section>
 
 
