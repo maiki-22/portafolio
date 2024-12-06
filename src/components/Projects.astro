@@ -7,6 +7,9 @@ import Vite from './icons/Vite.astro';
 import Social from './Social.astro';
 import GithubIcon from './icons/Github.astro';
 import LinkIcon from './icons/Link.astro';
+import TailwindIcon from './icons/TailwindIcon.astro';
+import LaravelIcon from './icons/LaravelIcon.astro';
+
 const TAGS = {
     NODEJS: {
         name: 'NodeJS',
@@ -32,7 +35,19 @@ const TAGS = {
         color: 'bg-fuchsia-700',
         class: 'size-4 md:size-6',
         icon: Bootstrap
-    }
+    },
+    TAILWIND: {
+        name: 'Tailwind',
+        color: 'bg-blue-500',
+        class: 'size-4 md:size-6',
+        icon: TailwindIcon
+    },
+    LARAVEL: {
+        name: 'Laravel',
+        color: 'bg-red-500',
+        class: 'size-4 md:size-6',
+        icon: LaravelIcon
+    },
 
 
 }
@@ -45,6 +60,15 @@ const PROJECTS = [
         image: '/portafolio/projects/maikimusic.webp',
         tags: [TAGS.NODEJS,TAGS.REACT,TAGS.VITE,TAGS.BOOTSTRAP]
     },
+    {
+        title:'• MaikiMusic V2 - Libreria musical',
+        description: 'Aplicacion CRUD, version mejorar de la anterior, con mejor diseño y funcionalidades, utilizando React, Vite, TailwindCSS y Axios para peticiones HTTP. Soporta operaciones de creación, lectura, actualización y eliminación. Backend en PHP laravel realizado por mi.',
+        link: 'https://maiki-dev.me/music_app/',
+        github: 'https://github.com/maiki-22/music_app',
+        image: '/portafolio/projects/maikimusicv2.webp',
+        tags: [TAGS.NODEJS,TAGS.REACT,TAGS.VITE,TAGS.TAILWIND,TAGS.LARAVEL]
+
+    }
 ]
 ---
 
